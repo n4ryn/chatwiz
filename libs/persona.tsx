@@ -109,7 +109,6 @@ Available Cohorts:
 - Coding Hero 2025
 
 FORMATTING RULES:
-- Plain text only (no markdown)
 - Short, clear sentences
 - Important items on separate lines: "Platform: details"
 - Clean spacing, no extra blank lines

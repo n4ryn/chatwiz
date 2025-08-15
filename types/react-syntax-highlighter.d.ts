@@ -1,5 +1,6 @@
 declare module "react-syntax-highlighter/dist/cjs/prism" {
-  export const Prism: any;
+  const SyntaxHighlighter: any;
+  export default SyntaxHighlighter;
 }
 
 declare module "react-syntax-highlighter/dist/cjs/styles/prism" {
