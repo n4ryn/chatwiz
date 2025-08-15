@@ -1,7 +1,5 @@
+import Hero from "@/components/hero";
+
 export default function Home() {
-  return (
-    <div>
-      <p>Chatwiz</p>
-    </div>
-  );
+  return <Hero />;
 }
