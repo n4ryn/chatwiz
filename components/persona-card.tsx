@@ -63,6 +63,10 @@ const PersonaCard = ({ data }: { data: Persona }) => {
           {expertise.map((skill, index) => (
             <div
               className="bg-pink-400/20 text-xs font-medium px-3 py-1.5 rounded-full"
+              style={{
+                background:
+                  "linear-gradient(165deg, #f2f2f2 10%, #f9d8ad 60%, #f1a9d3 90%)",
+              }}
               key={index}
             >
               {skill}
