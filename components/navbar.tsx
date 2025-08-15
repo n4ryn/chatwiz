@@ -14,7 +14,7 @@ const Navbar = () => {
           <Link
             href="https://github.com/n4ryn/chatwiz"
             target="_blank"
-            className="flex items-center gap-2 px-6 py-2 text-sm font-medium text-white bg-black rounded-full transition-colors cursor-pointer"
+            className="flex items-center gap-2 px-6 py-2 text-sm font-medium text-white bg-black rounded-full cursor-pointer hover:bg-white hover:text-black hover:border-2 transition-all duration-200"
           >
             <BsGithub /> Github
           </Link>

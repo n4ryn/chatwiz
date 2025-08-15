@@ -47,7 +47,7 @@ const PersonaCard = ({ data }: { data: Persona }) => {
             {twitterHandle}
           </small>
         </div>
-        <button className="absolute right-0 inline-flex items-center justify-center w-auto px-5 mt-6 text-sm font-medium transition-colors duration-100 rounded-full h-9 mr-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 bg-neutral-900 disabled:pointer-events-none hover:bg-white hover:text-black hover:border-2 hover:border-black hover:shadow-md/40 text-neutral-100">
+        <button className="absolute transition-all duration-200 right-0 inline-flex items-center justify-center w-auto px-5 mt-6 text-sm font-medium rounded-full h-9 mr-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 bg-neutral-900 disabled:pointer-events-none hover:bg-white hover:text-black hover:border-2 hover:border-black hover:shadow-md/40 text-neutral-100">
           <Link href={`/chat/${id}`}>Chat</Link>
         </button>
       </div>
