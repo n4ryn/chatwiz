@@ -42,6 +42,14 @@ npm run build
 npm run start
 ```
 
+Environment Variables (.env):
+
+```bash
+OPENAI_API_KEY=your-preferred-model-api-key
+OPENAI_BASE_URL=your-preferred-models-api-url
+OPENAI_MODEL=your-preferred-model
+```
+
 ---
 
 ## Usage
