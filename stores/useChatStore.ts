@@ -3,7 +3,7 @@ import { persist } from "zustand/middleware";
 import { ChatType } from "@/types";
 
 interface ChatState {
-  chats: Record<string, ChatType[]>; // keyed by chatroomId
+  chats: Record<string, ChatType[]>;
   addChat: (chatroomId: string, chat: ChatType) => void;
   updateLastMessage: (chatroomId: string, content: string) => void;
   clearChats: (chatroomId: string) => void;
@@ -34,7 +34,7 @@ export const useChatStore = create<ChatState>()(
         })),
     }),
     {
-      name: "chat-storage", // key in localStorage
+      name: "chat-storage",
       storage: {
         getItem: (name) => {
           const value = localStorage.getItem(name);

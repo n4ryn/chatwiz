@@ -1,6 +1,6 @@
-import { ChatType, Persona } from "@/types";
 import Image from "next/image";
-import React from "react";
+
+import { ChatType, Persona } from "@/types";
 
 const Chat = ({ chat, persona }: { chat: ChatType; persona: Persona }) => {
   const { role, content, timestamp } = chat;

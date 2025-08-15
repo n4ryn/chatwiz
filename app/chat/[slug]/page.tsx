@@ -1,4 +1,5 @@
 import Chatroom from "@/components/chat-room";
+
 import { personaData } from "@/libs/persona";
 
 export default async function Page({ params }: { params: { slug: number } }) {

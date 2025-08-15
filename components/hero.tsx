@@ -1,6 +1,6 @@
-import { personaData } from "@/libs/persona";
-import React from "react";
 import PersonaCard from "./persona-card";
+
+import { personaData } from "@/libs/persona";
 
 const Hero = () => {
   return (
@@ -18,11 +18,12 @@ const Hero = () => {
               ⚡️AI-Powered Persona Chat Experience
             </p>
             <h1 className="mx-auto mb-6 max-w-3xl text-3xl font-normal tracking-tight leading-tight text-gray-900 text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-              Build Stronger Relationships, One Message at a Time
+              AI Personas Inspired by Real-World Thought Leaders{" "}
             </h1>
-            <p className="mx-auto mb-8 text-lg leading-relaxed text-gray-600 md:max-w-lg md:text-xl">
-              Bridge the gap between support and service with conversations that
-              build loyalty from day one.
+            <p className="mx-auto mb-8 text-lg leading-relaxed text-gray-600 md:max-w-2xl md:text-xl">
+              Connect with digital versions of your favorite experts and
+              personalities, each AI persona carefully crafted to reflect their
+              real-world knowledge, speaking style, and unique perspectives
             </p>
           </div>
 

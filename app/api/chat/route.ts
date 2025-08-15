@@ -1,10 +1,22 @@
 import OpenAI from "openai";
 import { NextResponse } from "next/server";
 
+import { rateLimiter } from "@/libs/rateLimiter";
+
 export const runtime = "edge";
 
 export async function POST(req: Request) {
   try {
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0] || "unknown-ip";
+
+    const { allowed } = rateLimiter(ip);
+    if (!allowed) {
+      return new Response(JSON.stringify({ error: "demo_complete" }), {
+        status: 429,
+      });
+    }
+
     const { history, systemPrompt } = await req.json();
 
     const client = new OpenAI({
@@ -25,7 +37,6 @@ export async function POST(req: Request) {
     const stream = await client.chat.completions.create({
       model,
       messages,
-      // temperature: 0.7,
       stream: true,
     });
 
