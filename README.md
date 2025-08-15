@@ -59,7 +59,8 @@ npm run start
 
 ## Contributing & Support
 
-- Open an issue or feature request on [GitHub Issues](https://github.com/n4ryn/chatwiz/issues). - Reach out on [Twitter](https://x.com/n4ryn_) or [LinkedIn](https://www.linkedin.com/in/n4ryn/).
+- Open an issue or feature request on [GitHub Issues](https://github.com/n4ryn/chatwiz/issues).
+- Reach out on [Twitter](https://x.com/n4ryn_) or [LinkedIn](https://www.linkedin.com/in/n4ryn/).
 
 ## Badges
 
