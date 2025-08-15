@@ -1,4 +1,10 @@
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/cjs/prism";
+import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { HTMLAttributes } from "react";
+import { ExtraProps } from "react-markdown";
 
 import { ChatType, Persona } from "@/types";
 
@@ -35,9 +41,42 @@ const Chat = ({ chat, persona }: { chat: ChatType; persona: Persona }) => {
       </div>
 
       <div
-        className={`chat-bubble ${isAssistant ? "bg-white" : "bg-gray-200"}`}
+        className={`chat-bubble ${isAssistant ? "bg-white" : "bg-gray-100"}`}
       >
-        {content || <span className="loading loading-dots loading-sm"></span>}
+        {content ? (
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              code({
+                inline,
+                className,
+                children,
+                ...props
+              }: HTMLAttributes<HTMLElement> &
+                ExtraProps & { inline?: boolean }) {
+                const match = /language-(\w+)/.exec(className || "");
+                return !inline && match ? (
+                  <SyntaxHighlighter
+                    style={oneDark}
+                    language={match[1]}
+                    PreTag="div"
+                    {...props}
+                  >
+                    {String(children).replace(/\n$/, "")}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                );
+              },
+            }}
+          >
+            {content}
+          </ReactMarkdown>
+        ) : (
+          <span className="loading loading-dots loading-sm"></span>
+        )}
       </div>
     </div>
   );
