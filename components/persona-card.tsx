@@ -17,7 +17,7 @@ const PersonaCard = ({ data }: { data: Persona }) => {
   } = data;
 
   return (
-    <div className="relative md:max-w-sm overflow-hidden bg-white border rounded-lg shadow-sm border-neutral-200/60 mb-4">
+    <div className="relative md:max-w-sm overflow-hidden bg-white border rounded-lg shadow-sm border-neutral-200/60 mb-4 hover:shadow-xl/20 hover:shadow-pink-400 hover:-translate-y-1 transition-all duration-300">
       <Image
         alt={`${name} cover`}
         width={400}
