@@ -92,6 +92,7 @@ const Chatroom = ({ persona }: { persona: Persona }) => {
                 .getState()
                 .updateLastMessage(chatroomId, partialMessage);
             } catch (error) {
+              console.log(error);
               updateLastMessage(
                 chatroomId,
                 "❌ Network error. Please try again."
@@ -101,6 +102,7 @@ const Chatroom = ({ persona }: { persona: Persona }) => {
         });
       }
     } catch (error) {
+      console.log(error);
       updateLastMessage(chatroomId, "❌ Network error. Please try again.");
     }
   };
